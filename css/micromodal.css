@@ -1,0 +1,184 @@
+/**************************\
+  Basic Modal Styles
+\**************************/
+
+@font-face {
+    font-family: "Druk Wide Medium";
+    src: url("fonts/Druk\ Wide\ Medium.otf") format("opentype");
+}
+
+.modal {
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+
+    background: linear-gradient(45deg, rgba(255, 193, 7, 1), rgb(183, 21, 64, 1), rgba(255, 193, 7, 1));
+    background-size: 300% 300%;
+    -webkit-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+}
+
+.modal__container {
+    background-color: #0e0e0e;
+    padding: 30px;
+    max-width: 80vmin;
+    max-height: 50vmax;
+    /* border-radius: 4px; */
+    overflow-y: auto;
+    box-sizing: border-box;
+    box-shadow: 10px 10px rgb(183, 21, 64, 1);
+    background: linear-gradient(45deg, rgba(255, 193, 7, 1), rgba(255, 193, 7, 1));
+    background-size: 300% 300%;
+    -webkit-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+    
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    color: #ffffff;
+    box-sizing: border-box;
+    font-family: 'Druk Wide Medium', sans-serif;
+    text-transform: uppercase;
+}
+
+.modal__close {
+    border: 0;
+    right: 20px;
+    position: absolute;
+    background: transparent;
+}
+
+.modal__header .modal__close:before {
+    content: "\2715";
+}
+
+.modal__content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    font-family: 'Druk Wide Medium', sans-serif;
+    text-transform: uppercase;
+
+    background: linear-gradient(45deg, rgba(255, 193, 7, 1), rgb(183, 21, 64, 1), rgba(255, 193, 7, 1));
+    background-size: 300% 300%;
+    -webkit-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url("//smdvs.com/assets/img/title.jpg") no-repeat;
+    background-size: cover;
+    pointer-events: none;
+}
+
+
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes mmfadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes mmslideIn {
+    from {
+        transform: translateY(15%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes mmslideOut {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10%);
+    }
+}
+
+.micromodal-slide {
+    display: none;
+}
+
+.micromodal-slide.is-open {
+    display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+    animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+/* .micromodal-slide[aria-hidden="false"] .modal__container {
+    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+} */
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+    will-change: transform;
+}
