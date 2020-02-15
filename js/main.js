@@ -7,7 +7,11 @@ $(document).ready(function () {
     });
 });
 
+<<<<<<< HEAD
 // Custom cursor
+=======
+Custom cursor
+>>>>>>> a454b9582b957ed98b7ec4adcd456ae58573e5d1
 document.addEventListener("mousemove", function (event) {
     const mouseX = event.clientX;
     const mouseY = event.clientY;
