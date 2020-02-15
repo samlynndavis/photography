@@ -8,15 +8,15 @@ $(document).ready(function () {
 });
 
 // Custom cursor
-// document.addEventListener("mousemove", function (event) {
-//     const mouseX = event.clientX;
-//     const mouseY = event.clientY;
+document.addEventListener("mousemove", function (event) {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
 
-//     const ball = document.querySelector('div.ball')
+    const ball = document.querySelector('div.ball')
 
-//     ball.style.left = mouseX + "px"
-//     ball.style.top = mouseY + "px"
-// })
+    ball.style.left = mouseX + "px"
+    ball.style.top = mouseY + "px"
+})
 
 // micromodal.js initializer
 MicroModal.init({
