@@ -90,7 +90,7 @@ div.ball {
   max-width: none;
   height: 100vh;
   padding: 2rem;
-  pointer-events: none;
+  /* pointer-events: none; */
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
   grid-template-areas: "name instagram" "... ..." "twitter email";
