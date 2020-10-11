@@ -46,38 +46,37 @@ body {
 }
 
 div.ball {
-    background-color: transparent;
-    width: 25px;
-    height: 25px;
-    border: 2px solid #fff;
-    border-radius: 07151986%;
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #fff;
+  border-radius: 07151986%;
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    z-index: 10000;
-    /* mix-blend-mode: exclusion; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  mix-blend-mode: exclusion;
 
-    pointer-events: none;
+  pointer-events: none;
 
-    /* animation: pulse 3s infinite linear; */
-
+  animation: pulse 3s infinite linear;
 }
 
-/* @keyframes pulse {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-    }
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 
-    50% {
-        transform: translate(-50%, -50%) scale(1.1);
-    }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-} */
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
 
 .nav {
   position: fixed;
@@ -91,7 +90,7 @@ div.ball {
   max-width: none;
   height: 100vh;
   padding: 2rem;
-  /* pointer-events: none; */
+  pointer-events: none;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
   grid-template-areas: "name instagram" "... ..." "twitter email";
@@ -100,31 +99,31 @@ div.ball {
   color: var(--color-link);
 }
 
-/* .contact-wrapper {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    display: flex;
-    z-index: 1;
-    align-items: center;
-    justify-content: center;
+.contact-wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-box {
-    height: 50%;
-    width: 50%;
-    background-color: #fff;
-    position: absolute;
-    z-index: 100;
-    opacity: 1;
-    transition: all 1s linear;
-} */
+  height: 50%;
+  width: 50%;
+  background-color: #fff;
+  position: absolute;
+  z-index: 100;
+  opacity: 1;
+  transition: all 1s linear;
+}
 
 .footer {
   height: 50px;
   background-color: transparent;
   position: fixed;
-  right:10px;
+  right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
